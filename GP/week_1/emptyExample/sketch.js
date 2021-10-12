@@ -6,6 +6,10 @@ function setup() {
 function draw() {
     background(0);
     fill(255);
-    translate(mouseX, mouseY);
-    ellipse(0, 0, 50, 50);
+    rect(0, 0, 50, 50);
+
+    fill(125);
+    translate(200,100);
+    rotate(radians(45));
+    rect(0,0,50,50);
 }
