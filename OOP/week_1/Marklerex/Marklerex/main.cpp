@@ -60,7 +60,7 @@ void processUserOption(int userOption)
     }
     if (userOption == 1)
     {
-        menu[1]();
+        printHelp();
     }
     if (userOption == 2)
     {
@@ -83,11 +83,15 @@ void processUserOption(int userOption)
         gotoNextTimeFrame();
     }
 }
+float average(float x, float y)
+{
+    return (x+y)/2;
+}
 int main(int argc, const char * argv[]) {
 //    std::map<int,void(*)()> menu;
     // connect 1 to the printHelp function
 //    menu[1] = printHelp;
-    
+    std::cout << average(2,3) << std::endl;
     while (true)
        {
            printMenu();
