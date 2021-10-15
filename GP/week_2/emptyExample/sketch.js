@@ -1,37 +1,44 @@
 
-var ball;
+var lines = [];
 function setup() {
     createCanvas(900, 600);
-    ball = new Ball();
+    background(0);
+    for(var i = 0; i < 100;i++){
+        lines[i] = new MouseTracer();
+    }
 }
 
 function draw() {
-    background(0);
-    ball.run();
+    for(var i = 0; i < 100;i++){
+        lines[i].run();
+    }
 }
 
-class Ball{
+class MouseTracer{
     constructor(){
-        this.speedX = random(-2, 2);
-        this.speedY = random(-2, 2);
-        this.locX = random(width);
-        this.locY = random(height);
-    }
+        this.velocity = new createVector(random(-2, 2),random(-2, 2));
+        this.location = new createVector(width/2, height/2);
+        this.prevLocation = new createVector(width/2, height/2);
+        this.acceleration = new createVector(0, 0);
+        this.maxLimit = random(4.5, 5);
+        }
     run(){
         this.draw();
         this.move();
-        this.bounce();
     }
     draw(){
-        fill(125);
-        ellipse(this.locX, this.locY, 40, 40);
+        stroke(random(100,255),random(100,255),random(100,255));
+        line(this.location.x, this.location.y,this.prevLocation.x, this.prevLocation.y);
+        this.prevLocation = this.location.copy();
     }
     move(){
-        this.locX += this.speedX;
-        this.locY += this.speedY;
-    }
-    bounce(){
-        if(this.locX < 1 || this.locX > width) this.speedX *= -1;
-        if(this.locY < 1 || this.locY > height) this.speedY *= -1;
+        var mouse = createVector(mouseX, mouseY);
+        var dir = p5.Vector.sub(mouse, this.location);
+        dir.normalize()
+        dir.mult(0.5)
+        this.acceleration = dir;
+        this.velocity.add(this.acceleration);
+        this.velocity.limit(this.maxLimit);
+        this.location.add(this.velocity);
     }
 }
