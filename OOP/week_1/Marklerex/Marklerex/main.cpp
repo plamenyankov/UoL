@@ -7,7 +7,8 @@
 
 #include <iostream>
 #include <map>
-
+#include <string>
+#include <vector>
 void printMenu()
 {
     std::cout << "1: Print Help" << std::endl;
@@ -52,6 +53,34 @@ int getUserOption()
     std::cout << "You chose: " << userOption << std::endl;
     return userOption;
 }
+
+
+enum class OrderBookType{bid, ask};
+
+class OrderBookEntry
+{
+    public:
+        OrderBookEntry(double price,
+        double amount,
+        std::string product,
+        std::string timestamp,
+        OrderBookType orderType):price(price),amount(amount),product(product),timestamp(timestamp),orderType(orderType)
+        {
+//            this->price = price;
+//            this->amount = amount;
+//            this->product = product;
+//            this->timestamp = timestamp;
+//            this->orderType = orderType;
+        }
+
+        double price;
+        double amount;
+        std::string product;
+        std::string timestamp;
+        OrderBookType orderType;
+};
+
+
 void processUserOption(int userOption)
 {
     if (userOption == 0)
@@ -91,13 +120,18 @@ int main(int argc, const char * argv[]) {
 //    std::map<int,void(*)()> menu;
     // connect 1 to the printHelp function
 //    menu[1] = printHelp;
-    std::cout << average(2,3) << std::endl;
-    while (true)
-       {
-           printMenu();
-           int userOption = getUserOption();
-           processUserOption(userOption);
-        }
+//    std::cout << average(2,3) << std::endl;
+//    while (true)
+//       {
+//           printMenu();
+//           int userOption = getUserOption();
+//           processUserOption(userOption);
+//        }
+    
+    std::vector<OrderBookEntry> orders;
+    orders.push_back(OrderBookEntry{1000, 0.002, "BTC/USDT", "2020/03/17 17:01:24.884492", OrderBookType::bid});
+     
+    std::cout << orders[0].price << std::endl;
     return 0;
 }
 
