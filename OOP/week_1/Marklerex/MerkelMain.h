@@ -4,9 +4,27 @@
 //
 //  Created by Plamen Yankov on 21.10.21.
 //
+#pragma once
+#include "OrderBookEntry.h"
+#include <vector>
 
-#ifndef MerkelMain_h
-#define MerkelMain_h
-
-
-#endif /* MerkelMain_h */
+class MerkelMain
+{
+public:
+    MerkelMain();
+        void init();
+private:
+    void loadOrderBook();
+        void printMenu();
+        void printHelp();
+        void printMarketStats();
+        void enterOffer();
+        void enterBid();
+        void printWallet();
+        void gotoNextTimeFrame();
+        int getUserOption();
+        void processUserOption(int userOption);
+    
+    
+        std::vector<OrderBookEntry> orders;
+};
