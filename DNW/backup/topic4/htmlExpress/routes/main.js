@@ -12,4 +12,11 @@ module.exports = function (app) {
     //searching in the database
         res.send("This is the keyword you entered: " + req.query.keyword + "<br>" + "This is the result of the search: "); 
     });
+    app.get("/register", function (req,res) {
+        res.render("register.html");
+    });
+    app.post("/registered", function (req,res) {
+        // saving data in database
+     res.send(req.body)
+    });
 }
