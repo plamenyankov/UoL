@@ -10,6 +10,8 @@
 		CA37361C2716BFDF0010FB99 /* main.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA37361B2716BFDF0010FB99 /* main.cpp */; };
 		CA6933CD272121D700A7DDDD /* OrderBookEntry.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA6933CB272121D700A7DDDD /* OrderBookEntry.cpp */; };
 		CA6933D12721279900A7DDDD /* MerkelMain.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CA6933D02721279900A7DDDD /* MerkelMain.cpp */; };
+		CABDACFB27365F84003590D6 /* test.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CABDACF927365E24003590D6 /* test.cpp */; };
+		CABDACFE2737BD33003590D6 /* CSVReader.cpp in Sources */ = {isa = PBXBuildFile; fileRef = CABDACFC2737BD33003590D6 /* CSVReader.cpp */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXCopyFilesBuildPhase section */
@@ -31,6 +33,9 @@
 		CA6933CE2721263E00A7DDDD /* OrderBookEntry.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = OrderBookEntry.h; sourceTree = "<group>"; };
 		CA6933CF2721277100A7DDDD /* MerkelMain.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = MerkelMain.h; sourceTree = "<group>"; };
 		CA6933D02721279900A7DDDD /* MerkelMain.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = MerkelMain.cpp; sourceTree = "<group>"; };
+		CABDACF927365E24003590D6 /* test.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = test.cpp; sourceTree = "<group>"; };
+		CABDACFC2737BD33003590D6 /* CSVReader.cpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.cpp; path = CSVReader.cpp; sourceTree = "<group>"; };
+		CABDACFD2737BD33003590D6 /* CSVReader.hpp */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.cpp.h; path = CSVReader.hpp; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -47,8 +52,6 @@
 		CA37360F2716BFDF0010FB99 = {
 			isa = PBXGroup;
 			children = (
-				CA6933CF2721277100A7DDDD /* MerkelMain.h */,
-				CA6933CE2721263E00A7DDDD /* OrderBookEntry.h */,
 				CA37361A2716BFDF0010FB99 /* Marklerex */,
 				CA3736192716BFDF0010FB99 /* Products */,
 			);
@@ -65,9 +68,14 @@
 		CA37361A2716BFDF0010FB99 /* Marklerex */ = {
 			isa = PBXGroup;
 			children = (
+				CA6933CE2721263E00A7DDDD /* OrderBookEntry.h */,
+				CA6933CF2721277100A7DDDD /* MerkelMain.h */,
 				CA37361B2716BFDF0010FB99 /* main.cpp */,
 				CA6933CB272121D700A7DDDD /* OrderBookEntry.cpp */,
 				CA6933D02721279900A7DDDD /* MerkelMain.cpp */,
+				CABDACF927365E24003590D6 /* test.cpp */,
+				CABDACFC2737BD33003590D6 /* CSVReader.cpp */,
+				CABDACFD2737BD33003590D6 /* CSVReader.hpp */,
 			);
 			path = Marklerex;
 			sourceTree = "<group>";
@@ -129,7 +137,9 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				CABDACFE2737BD33003590D6 /* CSVReader.cpp in Sources */,
 				CA6933D12721279900A7DDDD /* MerkelMain.cpp in Sources */,
+				CABDACFB27365F84003590D6 /* test.cpp in Sources */,
 				CA6933CD272121D700A7DDDD /* OrderBookEntry.cpp in Sources */,
 				CA37361C2716BFDF0010FB99 /* main.cpp in Sources */,
 			);
