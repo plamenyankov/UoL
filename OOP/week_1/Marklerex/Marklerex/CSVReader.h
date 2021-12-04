@@ -1,14 +1,3 @@
-//
-//  CSVReader.hpp
-//  Marklerex
-//
-//  Created by Plamen Yankov on 7.11.21.
-//
-
-#ifndef CSVReader_hpp
-#define CSVReader_hpp
-
-#include <stdio.h>
 #pragma once
 #include <vector>
 #include <string>
@@ -21,12 +10,11 @@ public:
         
 private:
     static std::vector<std::string> tokenise(std::string csvFile, char separator);
-    
-    
+    static OrderBookEntry stringToOBE(std::vector<std::string> string);
     
 };
 
 
 
 
-#endif /* CSVReader_hpp */
+

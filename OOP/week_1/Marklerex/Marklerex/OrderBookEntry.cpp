@@ -1,10 +1,3 @@
-//
-//  OrderBookEntry.cpp
-//  Marklerex
-//
-//  Created by Plamen Yankov on 21.10.21.
-//
-
 #include "OrderBookEntry.h"
 
 OrderBookEntry::OrderBookEntry(double price,
@@ -20,4 +13,17 @@ orderType(orderType)
 {
     
     
+}
+
+OrderBookType OrderBookEntry::stringToOrderBookType(std::string s)
+{
+    if(s == "ask")
+    {
+        return OrderBookType::ask;
+    }
+    if(s == "bid") 
+    {
+        return OrderBookType::bid;
+    }
+    return OrderBookType::unkown;
 }

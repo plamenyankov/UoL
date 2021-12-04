@@ -1,13 +1,7 @@
-//
-//  OrderBookEntry.h
-//  Marklerex
-//
-//  Created by Plamen Yankov on 21.10.21.
-//
 #pragma once
 #include <string>
 
-enum class OrderBookType{bid, ask};
+enum class OrderBookType{bid, ask, unkown};
 
 class OrderBookEntry
 {
@@ -17,6 +11,8 @@ class OrderBookEntry
         std::string product,
         std::string timestamp,
         OrderBookType orderType);
+
+        static OrderBookType stringToOrderBookType(std::string s);
 
         double price;
         double amount;
