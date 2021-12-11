@@ -1,7 +1,7 @@
 #pragma once
 #include <string>
 
-enum class OrderBookType{bid, ask, unkown};
+enum class OrderBookType{bid, ask, unkown, asksale, bidsale};
 
 class OrderBookEntry
 {
@@ -10,13 +10,29 @@ class OrderBookEntry
         double amount,
         std::string product,
         std::string timestamp,
-        OrderBookType orderType);
+        OrderBookType orderType,
+        std::string username = "dataset");
 
         static OrderBookType stringToOrderBookType(std::string s);
+        
+        static bool compareByTimestamp(OrderBookEntry& e1, OrderBookEntry& e2)
+        {
+            return e1.timestamp < e2.timestamp;
+        }
+        static bool compareByPriceAsc(OrderBookEntry& e1, OrderBookEntry& e2)
+        {
+            return e1.price < e2.price;
+        }
+
+        static bool compareByPriceDesc(OrderBookEntry& e1, OrderBookEntry& e2)
+        {
+            return e1.price > e2.price;
+        }     
 
         double price;
         double amount;
         std::string product;
         std::string timestamp;
         OrderBookType orderType;
+        std::string username;
 };
