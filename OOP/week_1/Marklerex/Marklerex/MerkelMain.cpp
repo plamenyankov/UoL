@@ -40,6 +40,9 @@ void MerkelMain::printMenu()
 void MerkelMain::printHelp()
 {
     std::cout << "Help - Your aim is to make money. Analyse the market and make bids and offers." << std::endl;
+    std::cout << "OK test" << std::endl;
+    std::cout << "OK test" << std::endl;
+
 }
 void MerkelMain::printMarketStats()
 {
@@ -104,7 +107,7 @@ void MerkelMain::enterAsk()
 }
 void MerkelMain::enterBid()
 {
-     std::cout << "Make an bid - enter the amount: product, price, amount, eg ETH/BTC,200,0.5" << std::endl;
+    std::cout << "Make an bid - enter the amount: product, price, amount, eg ETH/BTC,200,0.5" << std::endl;
     std::string input;
     std::getline(std::cin, input);
 

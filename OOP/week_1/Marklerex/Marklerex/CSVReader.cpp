@@ -39,6 +39,7 @@ CSVReader::CSVReader(){
 
         do{
             end = csvLine.find_first_of(separator, start);
+
         if(start == csvLine.length() || start == end) break;
 
         if(end >= 0) token = csvLine.substr(start, end - start);
@@ -73,6 +74,7 @@ CSVReader::CSVReader(){
         tokens[1],
         tokens[0],
         OrderBookEntry::stringToOrderBookType(tokens[2])};
+
         return obe;
     }
      OrderBookEntry CSVReader::stringToOBE(std::string priceString,

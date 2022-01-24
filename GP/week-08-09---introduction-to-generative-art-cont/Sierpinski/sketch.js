@@ -26,17 +26,19 @@ function draw()
   background(255);
   translate(width/2, height/2);  //move the origin of next drawing to the center of the window
   mySquare(startSize); //calling the recursive function
-  console.log(noOfCalls);
+  // console.log(noOfCalls);
   noLoop();
 }
 
 function mySquare(side)
 {
-  side=side/3;  //at each iteration the mySquares are 3 times smaller
+  side=side/3;  //at each iteration the mySquares are 3 times smaller 243
+ 
   noOfCalls++;
 
   if (side>=1)
   {
+    // console.log(side);
     rect(0,0,side,side);
 
     push();

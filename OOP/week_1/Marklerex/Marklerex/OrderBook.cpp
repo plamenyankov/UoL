@@ -8,7 +8,7 @@ OrderBook::OrderBook(std::string filename)
 {
     orders = CSVReader::readCSV(filename);
 }
-/** return vector of all know produscts in the dataset */    
+/** return vector of all know products in the dataset */
 std::vector<std::string> OrderBook::getKnownProducts()
 {
     std::map<std::string,bool> prodMap;

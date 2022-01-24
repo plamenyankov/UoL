@@ -1,7 +1,8 @@
-//#include <string>
-//#include <vector>
-//#include <iostream>
-//#include <fstream>
+#include <string>
+#include <vector>
+#include <iostream>
+#include <fstream>
+#include <map>
 //
 //
 //std::vector<std::string> tokenise(std::string csvLine, char separator){
@@ -27,40 +28,19 @@
 //    return tokens;
 //}
 //
-//int main(){
-//    std::ifstream csvFile{"20200317.csv"};
-//    std::vector<std::string> tokens;
-//    std::string line;
-//    signed int cnt = 1;
-//
-//    if(csvFile.is_open()){
-//        std::cout << "File is open" << std::endl;
-//
-//        while(std::getline(csvFile, line)){
-//
-//            tokens = tokenise(line, ',');
-//            if(tokens.size() != 5){
-//                std::cout << "Bad line " << cnt << std::endl;
-//                continue;
-//            }
-//
-//            try{
-//                double price = std::stod(tokens[3]);
-//                double amount = std::stod(tokens[4]);
-//                std::cout << price << " : " << amount << std::endl;
-//            }catch(const std::exception& e){
-//                std::cout << "Bad float!" << tokens[3] << " " <<tokens[4] << std::endl;
-//                continue;
-//            }
-//
-//
-//            // if(cnt > 2) break;
-//             cnt++;
-//        }
-//
-//        csvFile.close();
-//    }else{
-//        std::cout << "File is NOT open" << std::endl;
-//    }
-//
-//}
+int main(){
+    std::vector<std::string> arr{"1","2","3","1","2","4"};
+    std::map<std::string, bool> arrMap;
+    for(std::string& e: arr)
+    {
+        arrMap[e] = true;
+    }
+
+
+    for(auto const& e: arrMap)
+    {
+        std::cout << "from test "<< e.first << std::endl;
+
+    }
+
+}

@@ -1,9 +1,3 @@
-//
-//  main.cpp
-//  Marklerex
-//
-//  Created by Plamen Yankov on 13.10.21.
-//
 #include "OrderBookEntry.h"
 #include "MerkelMain.h"
 #include "CSVReader.h"
