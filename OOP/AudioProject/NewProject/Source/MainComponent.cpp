@@ -66,6 +66,9 @@ void MainComponent::paint (juce::Graphics& g)
     g.fillAll (getLookAndFeel().findColour (juce::ResizableWindow::backgroundColourId));
 
     // You can add your drawing code here!
+    g.setFont (20.0f);
+    g.drawText ("Hello from Burgas", getLocalBounds(),
+                 Justification::centred, true);
 }
 
 void MainComponent::resized()
@@ -73,5 +76,5 @@ void MainComponent::resized()
     // This is called when the MainContentComponent is resized.
     // If you add any child components, this is where you should
     // update their positions.
-    button.setBounds(0,0, getWidth(),getHeight()/2);
+    button.setBounds(0,0, getWidth(),getHeight()/5);
 }
