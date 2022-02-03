@@ -1,24 +1,25 @@
 /*
   ==============================================================================
 
-    This file contains the basic startup code for a JUCE application.
+    This file was auto-generated!
+
+    It contains the basic startup code for a JUCE application.
 
   ==============================================================================
 */
 
-#include <JuceHeader.h>
+#include "../JuceLibraryCode/JuceHeader.h"
 #include "MainComponent.h"
 
 //==============================================================================
-class NewProjectApplication  : public juce::JUCEApplication
+class OtoDecksApplication  : public juce::JUCEApplication
 {
 public:
     //==============================================================================
-    NewProjectApplication() {}
-
+    OtoDecksApplication() {}
     const juce::String getApplicationName() override       { return ProjectInfo::projectName; }
     const juce::String getApplicationVersion() override    { return ProjectInfo::versionString; }
-    bool moreThanOneInstanceAllowed() override             { return true; }
+    bool moreThanOneInstanceAllowed() override       { return true; }
 
     //==============================================================================
     void initialise (const juce::String& commandLine) override
@@ -58,11 +59,10 @@ public:
     class MainWindow    : public juce::DocumentWindow
     {
     public:
-        MainWindow (juce::String name)
-            : DocumentWindow (name,
-                              juce::Desktop::getInstance().getDefaultLookAndFeel()
-                                                          .findColour (juce::ResizableWindow::backgroundColourId),
-                              DocumentWindow::allButtons)
+        MainWindow (juce::String name)  : DocumentWindow (name,
+                                                          juce::Desktop::getInstance().getDefaultLookAndFeel()
+                                                                          .findColour (ResizableWindow::backgroundColourId),
+                                                    DocumentWindow::allButtons)
         {
             setUsingNativeTitleBar (true);
             setContentOwned (new MainComponent(), true);
@@ -102,4 +102,4 @@ private:
 
 //==============================================================================
 // This macro generates the main() routine that launches the app.
-START_JUCE_APPLICATION (NewProjectApplication)
+START_JUCE_APPLICATION (OtoDecksApplication)

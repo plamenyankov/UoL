@@ -445,6 +445,12 @@
     <ClCompile Include="..\..\Source\MainComponent.cpp">
       <Filter>AudioProject\Source</Filter>
     </ClCompile>
+    <ClCompile Include="..\..\Source\DJAudioPlayer.cpp">
+      <Filter>AudioProject\Source</Filter>
+    </ClCompile>
+    <ClCompile Include="..\..\Source\DeckGUI.cpp">
+      <Filter>AudioProject\Source</Filter>
+    </ClCompile>
     <ClCompile Include="C:\JUCE\modules\juce_audio_basics\buffers\juce_AudioChannelSet.cpp">
       <Filter>JUCE Modules\juce_audio_basics\buffers</Filter>
     </ClCompile>
@@ -2545,6 +2551,12 @@
   </ItemGroup>
   <ItemGroup>
     <ClInclude Include="..\..\Source\MainComponent.h">
+      <Filter>AudioProject\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\DJAudioPlayer.h">
+      <Filter>AudioProject\Source</Filter>
+    </ClInclude>
+    <ClInclude Include="..\..\Source\DeckGUI.h">
       <Filter>AudioProject\Source</Filter>
     </ClInclude>
     <ClInclude Include="C:\JUCE\modules\juce_audio_basics\audio_play_head\juce_AudioPlayHead.h">

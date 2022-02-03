@@ -1,13 +1,19 @@
 <?xml version="1.0" encoding="UTF-8"?>
 
 <JUCERPROJECT id="cVguLu" name="AudioProject" projectType="guiapp" useAppConfig="0"
-              addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1">
+              addUsingNamespaceToJuceHeader="0" displaySplashScreen="1" jucerFormatVersion="1"
+              defines="JUCE_MODAL_LOOPS_PERMITTED=1">
   <MAINGROUP id="ZSskjb" name="AudioProject">
     <GROUP id="{DFE4AD11-2039-D8B3-3F6D-AB83A150E99F}" name="Source">
       <FILE id="QlKsA4" name="Main.cpp" compile="1" resource="0" file="Source/Main.cpp"/>
       <FILE id="lrhMky" name="MainComponent.h" compile="0" resource="0" file="Source/MainComponent.h"/>
       <FILE id="w7bjUx" name="MainComponent.cpp" compile="1" resource="0"
             file="Source/MainComponent.cpp"/>
+      <FILE id="XC4wp2" name="DJAudioPlayer.cpp" compile="1" resource="0"
+            file="Source/DJAudioPlayer.cpp"/>
+      <FILE id="ssx099" name="DJAudioPlayer.h" compile="0" resource="0" file="Source/DJAudioPlayer.h"/>
+      <FILE id="aqAfhG" name="DeckGUI.cpp" compile="1" resource="0" file="Source/DeckGUI.cpp"/>
+      <FILE id="gOI5tG" name="DeckGUI.h" compile="0" resource="0" file="Source/DeckGUI.h"/>
     </GROUP>
   </MAINGROUP>
   <JUCEOPTIONS JUCE_STRICT_REFCOUNTEDPOINTER="1"/>
